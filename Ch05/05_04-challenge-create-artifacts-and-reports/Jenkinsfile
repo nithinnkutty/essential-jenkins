@@ -48,6 +48,7 @@ pipeline {
 
             echo "Archiving the JAR file..."
             // Add artifact archiving here...
+            archiveArtifacts artifacts: '**/hello-1.0-SNAPSHOT.jar', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
         }
     }
 }
